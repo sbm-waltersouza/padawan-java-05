@@ -12,8 +12,7 @@ public class TestandoListas {
 		aulas.add(aula1);
 		aulas.add(aula2);
 		aulas.add(aula3);
-		
-		
+		//teste no console view
 		System.out.println(aulas);
 	}
 }
