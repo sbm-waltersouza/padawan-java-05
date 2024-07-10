@@ -2,7 +2,6 @@ package br.com.alura;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
 
 public class TestandoListas {
 	public static void main(String[] args) {
