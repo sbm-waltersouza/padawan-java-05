@@ -1,5 +1,6 @@
 package br.com.alura;
 
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -24,11 +25,23 @@ public class Curso {
 	}
 
 	public List<Aula> getAulas() {
-		return aulas;
+		return Collections.unmodifiableList(aulas);
 	}
 	
 	public void adiciona(Aula aula) {
 		this.aulas.add(aula);
 	}
 
+	public int getTempoTotal() {
+		int tempoTotal = 0;
+		for (Aula aula : aulas) {
+			tempoTotal += aula.getTempo();
+		}
+		return tempoTotal;
+	}
+	
+	public String toString() {
+        return "[Curso: " + this.getNome() + ", tempo total: " + this.getTempoTotal()
+                + ", aulas: + " + this.aulas + "]";
+    }
 }
