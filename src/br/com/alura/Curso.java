@@ -30,7 +30,7 @@ public class Curso {
 	public List<Aula> getAulas() {
 		return Collections.unmodifiableList(aulas);
 	}
-	
+
 	public void adiciona(Aula aula) {
 		this.aulas.add(aula);
 	}
@@ -42,17 +42,21 @@ public class Curso {
 		}
 		return tempoTotal;
 	}
-	
+
 	public String toString() {
-        return "[Curso: " + this.getNome() + ", tempo total: " + this.getTempoTotal()
-                + ", aulas: + " + this.aulas + "]";
-    }
+		return "[Curso: " + this.getNome() + ", tempo total: " + this.getTempoTotal() + ", aulas: + " + this.aulas
+				+ "]";
+	}
 
 	public void matricula(Aluno aluno) {
 		this.alunos.add(aluno);
 	}
-	
-	public Set<Aluno> getAlunos(){
+
+	public Set<Aluno> getAlunos() {
 		return Collections.unmodifiableSet(alunos);
+	}
+
+	public boolean estaMatriculado(Aluno aluno) {
+		return this.alunos.contains(aluno);
 	}
 }
